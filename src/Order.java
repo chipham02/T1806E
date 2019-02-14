@@ -9,7 +9,7 @@ public class Order {
 
     public void addItem(Ass4.Product product){
         if(product.getQty() > 0){
-            //this.productArrayList = new ArrayList<>();
+            this.productArrayList = new ArrayList<>();
             this.productArrayList.add(product);
             this.grandTotal +=product.price;
             product.setQty(product.getQty()-1);
