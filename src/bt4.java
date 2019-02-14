@@ -15,7 +15,7 @@ public class bt4 {
 
         System.out.println("danh sach san pham:");
         for(Product sp:order.productArrayList){
-            System.out.println(sp.productName + "-- còn lại" +sp.getQty());
+            System.out.println(sp.productName + "-- còn lại " +sp.getQty());
         }
 
         System.out.println("tong tien don hang:");
