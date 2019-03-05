@@ -25,21 +25,21 @@ public class ManagePhoneBook {
             }
             switch (func){
                 case 1:
-                    ManagePhoneBook.inputName();
-                    ManagePhoneBook.inputPhone();
+                    name = ManagePhoneBook.inputName();
+                    phone = ManagePhoneBook.inputPhone();
                     phoneBook.insertPhone(name,phone);
                     break;
                 case 2:
-                    name = ManagePhoneBook.inputName(name);
+                    name = ManagePhoneBook.inputName();
                     phoneBook.removePhone(name);
                     break;
                 case 3:
-                    name = ManagePhoneBook.inputName(name);
-                    phone = ManagePhoneBook.inputPhone(phone);
+                    name = ManagePhoneBook.inputName();
+                    phone = ManagePhoneBook.inputPhone();
                     phoneBook.updatePhone(name,phone);
                     break;
                 case 4:
-                    name = ManagePhoneBook.inputName(name);
+                    name = ManagePhoneBook.inputName();
                     phoneBook.searchPhone(name);
                     break;
                 case 5:
@@ -50,14 +50,14 @@ public class ManagePhoneBook {
         }while (flag==0);
     }
 
-    public static void inputName(){
+    public static String inputName(){
         System.out.println("Input name: ");
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
         return string;
     }
 
-    public static void inputPhone(){
+    public static String inputPhone(){
         System.out.println("Input phone: ");
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();

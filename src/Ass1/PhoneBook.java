@@ -47,7 +47,7 @@ public class PhoneBook extends Phone {
     public void updatePhone(String name, String newphone){
         for (int i=0;i<this.PhoneList.size();i++){
             if (this.PhoneList.get(i).name.equals(name)){
-                this.PhoneList.get(i) = newphone;
+                this.PhoneList.get(i).phone = newphone;
             }
         }
     }
@@ -75,7 +75,7 @@ public class PhoneBook extends Phone {
                 return o1.name.compareTo(o2.name);
             }
         }).//forEach(ph -> {System.out.println(ph.name+" SĐT: "+ph.phone);});
-        forEach(phoneNumber -> {phoneNumbers.add(phoneNumber)});
+        forEach(phoneNumber -> {phoneNumbers.add(phoneNumber);});
         this.PhoneList = phoneNumbers;
         this.displayPhoneNumber();
 
